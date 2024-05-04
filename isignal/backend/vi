@@ -1,0 +1,35 @@
+register
+{
+    "success": true,
+    "message": "Success",
+    "content": {
+        "otpCode": "43555",
+        "otpHashCode": "0af78df1193043e16d39eebfafcc7cb906094e41e9540ad31bc911955818177e"
+    }
+}
+
+verify otp 
+{
+    "success": true,
+    "message": "Success",
+    "content": {
+        "citizenId": "c3157b81-3876-45a1-9d30-afd3d3c1a156",
+        "name": "Audrey",
+        "contact": "22890235468",
+        "email": null,
+        "address": null,
+        "birthdata": null,
+        "citizen": {
+            "id": "c3157b81-3876-45a1-9d30-afd3d3c1a156",
+            "status": "ACTIVE",
+            "occupation": null,
+            "userId": "be068e3f-ee55-40e9-b6b2-c8e491453e59",
+            "otp_code": "43555",
+            "otp_expiration_date": "2024-05-08T00:14:40.054Z",
+            "otp_hash_code": "0af78df1193043e16d39eebfafcc7cb906094e41e9540ad31bc911955818177e",
+            "created_at": "2024-05-03T00:14:40.058Z",
+            "updated_at": "2024-05-03T00:14:40.058Z"
+        },
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaXRpemVuSWQiOiJjMzE1N2I4MS0zODc2LTQ1YTEtOWQzMC1hZmQzZDNjMWExNTYiLCJpYXQiOjE3MTQ2OTUzMjksImV4cCI6MTcxNzI4NzMyOX0.D89HbjYwERJuidwFwF8SK4mlKgxNRzdM5IMvuF5ZmOw"
+    }
+}

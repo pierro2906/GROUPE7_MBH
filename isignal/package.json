@@ -1,0 +1,37 @@
+{
+  "name": "isignal",
+  "version": "1.0.0",
+  "description": "signalement app",
+  "main": "index.js",
+"scripts": {
+  "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+  "dev:backend": "cd backend && npm run dev",
+  "dev:frontend": "cd front_web && npm run dev",
+    "build": "concurrently \"npm run build:backend\" \"npm run build:frontend\"",
+  "build:backend": "cd backend && npm run build",
+  "build:frontend": "cd front_web && npm run build"
+}
+,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreykovic/iSignal.git"
+  },
+  "keywords": [
+    "otp",
+    "mobile",
+    "web",
+    "react",
+    "realtime"
+  ],
+  "author": "AMONA Audrey Birewa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dreykovic/iSignal/issues"
+  },
+  "homepage": "https://github.com/Dreykovic/iSignal#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "concurrently": "^8.2.2",
+    "D": "^1.0.0"
+  }
+}

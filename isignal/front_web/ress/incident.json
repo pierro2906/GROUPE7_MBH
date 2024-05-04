@@ -1,0 +1,174 @@
+
+{
+  "types_incidents": [
+    {
+      "nom": "Incendie",
+      "service": "Service d'incendie et de secours",
+      "contact": "118"
+    },
+    {
+      "nom": "Crise cardiaque",
+      "service": "Service d'urgence médicale(CHR sokode)",
+      "contact": "25 50 01 78"
+    },
+    {
+      "nom": "Braquage",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 15"
+    },
+    {
+      "nom": "Fuite de gaz",
+      "service": "Service d'urgence gaz / Pompiers",
+      "service2": "Mairie",
+      "contact1": "(00228)92 86 58 64",
+      "email": "mairie_sokode@yahoo.fr"
+    },
+    {
+      "nom": "Inondation",
+      "service": "Service d'incendie et de secours / Protection civile",
+      "service2": "Mairie",
+      "contact1": "(00228)92 86 58 64",
+      "email": "mairie_sokode@yahoo.fr"
+    },
+    {
+      "nom": "Violences domestiques",
+      "service": "CC sokode (Commissariat Central de Sokodé)",
+      "contact": "70 58 53 20"
+    },
+    {
+      "nom": "Accident de la route",
+      "service": "CC sokode (Commissariat Central de Sokodé)",
+      "contact": "70 58 53 20"
+    },
+    {
+      "nom": "Intrusion ou cambriolage",
+      "service": "CC sokode (Commissariat Central de Sokodé)",
+      "contact": "70 58 53 20"
+    },
+    {
+      "nom": "Attentat terroriste",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Fuite de produits chimiques",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Enlèvement",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Éboulement ou glissement de terrain",
+      "service": "Mairie",
+      "email": "mairie_sokode@yahoo.fr "
+    },
+    {
+      "nom": "Explosion",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Intempéries sévères (tempête, ouragan, tornade)",
+      "service": "Mairie",
+      "email": "mairie_sokode@yahoo.fr "
+    },
+    {
+      "nom": "Attaque armée",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Séisme",
+      "service": "Mairie",
+      "email": "mairie_sokode@yahoo.fr"
+    },
+    {
+      "nom": "Menace de bombe",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Disparition d'une personne",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Urgence médicale (autre que la crise cardiaque, par exemple, accident, blessure grave)",
+      "service": "CHU sokode",
+      "contact": "25 50 01 78"
+    },
+    {
+      "nom": "Panne de courant généralisée",
+      "service1": "CEET sokode",
+      "service2": "Mairie",
+      "contact1": "25 50 00 12",
+      "email": "mairie_sokode@yahoo.fr"
+    },
+    {
+      "nom": "Violation de la sécurité informatique (cyberattaque, piratage)",
+      "service": "CC sokode (Commissariat Central de Sokodé)",
+      "contact": "70 58 53 20"
+    },
+    {
+      "nom": "Pollution de l'eau",
+      "service1": "TDE sokode",
+      "service2": "Mairie",
+      "contact1": "00228 92 86 58 64",
+      "email": "mairie_sokode@yahoo.fr "
+    },
+    {
+      "nom": "Animal dangereux en liberté (par exemple, un animal sauvage)",
+      "service": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Problème de transport en commun (déraillement de train, accident de bus)",
+      "service": "CC sokode (Commissariat Central de Sokodé)",
+      "contact": "70 58 53 20"
+    },
+    {
+      "nom": "Menace biologique ou radiologique",
+      "service1": "BRI sokode (Brigade de Recherche et d'Intervention de Sokodé)",
+      "service2": "Mairie",
+      "contact1": "70 58 53 50",
+      "email": "mairie_sokode@yahoo.fr"
+    },
+    {
+      "nom": "covid",
+      "service": "BAC sokode(Brigade anti covid)",
+      "contact": "70 58 53 50"
+    },
+    {
+      "nom": "Coruption",
+      "service1": "CC sokode (Commissariat Central de Sokodé)",
+      "service2": "Mairie",
+      "contact1": "70 58 53 20",
+      "email": "mairie_sokode@yahoo.fr"
+    },
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

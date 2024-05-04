@@ -1,0 +1,156 @@
+.
+├── aaaa.js
+├── api.architecture.txt
+├── bbbb.js
+├── logs
+│   ├── errLog.log
+│   └── reqLog.log
+├── nodemon.json
+├── package.json
+├── package-lock.json
+├── prisma
+│   ├── client
+│   │   ├── seed.sql
+│   │   └── seed.ts
+│   ├── migrations
+│   │   ├── 20240427090536_init
+│   │   │   └── migration.sql
+│   │   ├── 20240429163659_init
+│   │   │   └── migration.sql
+│   │   └── migration_lock.toml
+│   └── schema.prisma
+├── public
+│   ├── fonts
+│   │   └── AnkhSanctuary-PVK0B.ttf
+│   └── images
+│       └── logo
+│           ├── app-logo.png
+│           ├── logo-dark.svg
+│           ├── logo-icon.svg
+│           └── logo.svg
+├── src
+│   ├── apis
+│   │   ├── controllers
+│   │   │   ├── auth
+│   │   │   │   └── AuthorityAuthController.ts
+│   │   │   └── authority
+│   │   │       └── AuhtorityController.ts
+│   │   ├── daos
+│   │   │   ├── authority
+│   │   │   │   ├── authorityCreateDao.ts
+│   │   │   │   ├── authorityDeleteDao.ts
+│   │   │   │   ├── authorityReadDao.ts
+│   │   │   │   └── authorityUpdateDao.ts
+│   │   │   ├── authorityToken
+│   │   │   │   ├── authorityTokenCreateDao.ts
+│   │   │   │   ├── authorityTokenDeleteDao.ts
+│   │   │   │   ├── authorityTokenReadDao.ts
+│   │   │   │   └── authorityTokenUpdateDao.ts
+│   │   │   ├── role
+│   │   │   │   ├── roleCreateDao.ts
+│   │   │   │   ├── roleDeleteDao.ts
+│   │   │   │   ├── roleReadDao.ts
+│   │   │   │   └── roleUpdateDao.ts
+│   │   │   └── user
+│   │   │       ├── userCreateDao.ts
+│   │   │       ├── userDeleteDao.ts
+│   │   │       ├── userReadDao.ts
+│   │   │       └── userUpdateDao.ts
+│   │   ├── routes
+│   │   │   ├── index.ts
+│   │   │   └── v1
+│   │   │       ├── auth
+│   │   │       │   ├── authority
+│   │   │       │   │   ├── authorityAutRoutes.ts
+│   │   │       │   │   └── index.ts
+│   │   │       │   └── index.ts
+│   │   │       ├── authority
+│   │   │       │   ├── authorityRoutes.ts
+│   │   │       │   └── index.ts
+│   │   │       └── index.ts
+│   │   ├── schemas
+│   │   │   ├── auth
+│   │   │   │   └── authority
+│   │   │   │       ├── authorityAuthTypes.ts
+│   │   │   │       └── authorityAuthValidators.ts
+│   │   │   ├── authority
+│   │   │   │   ├── authorityTypes.ts
+│   │   │   │   └── authorityValidators.ts
+│   │   │   └── authorityToken
+│   │   │       ├── authorityTokenTypes.ts
+│   │   │       └── authorityTokenValidator.ts
+│   │   └── services
+│   │       ├── auth
+│   │       │   ├── authority
+│   │       │   │   └── AuthorityAUthService.ts
+│   │       │   └── citizen
+│   │       ├── authority
+│   │       │   └── AuthorityService.ts
+│   │       └── authorityToken
+│   │           └── AuthorityTokenService.ts
+│   ├── config
+│   │   ├── app
+│   │   │   ├── appConfig.ts
+│   │   │   ├── index.ts
+│   │   │   └── types.ts
+│   │   ├── corsConfig.ts
+│   │   └── email
+│   │       ├── emailConfig.ts
+│   │       ├── index.ts
+│   │       └── types.ts
+│   ├── constants
+│   │   ├── emailConstant.ts
+│   │   └── errorConstant.ts
+│   ├── database
+│   │   ├── dbCheck.ts
+│   │   └── dbClient.ts
+│   ├── index.ts
+│   ├── middlewares
+│   │   ├── auth
+│   │   │   └── verifyJWT.ts
+│   │   ├── errorHandlerMiddleware.ts
+│   │   ├── loggerMiddleware.ts
+│   │   ├── preventCrossScriptingMiddleware.ts
+│   │   ├── rateLimiterMiddleware.ts
+│   │   ├── rbacMiddleware.ts
+│   │   ├── valideteSchemaMmiddleware.ts
+│   │   └── xssMiddleware.ts
+│   ├── scripts
+│   │   ├── generate-controller.ts
+│   │   ├── generate-dao.ts
+│   │   ├── generate-routes.ts
+│   │   ├── generate-schema.ts
+│   │   ├── generate-script.ts
+│   │   └── generate-service.ts
+│   ├── server
+│   │   ├── appServer.ts
+│   │   ├── httpServer.ts
+│   │   └── index.ts
+│   ├── utils
+│   │   ├── date
+│   │   │   └── dateUtil.ts.ts
+│   │   ├── files
+│   │   │   └── filesUtil.ts
+│   │   ├── http
+│   │   │   └── httpMessageUtil.ts
+│   │   ├── logger
+│   │   │   └── loggerUtil.ts
+│   │   ├── nodemailer
+│   │   │   ├── core
+│   │   │   │   ├── oauth_client.ts
+│   │   │   │   └── transporter.ts
+│   │   │   └── sender.ts
+│   │   ├── string
+│   │   │   └── stringUtil.ts
+│   │   └── swagger
+│   │       └── swagger.ts
+│   └── views
+│       └── templates
+│           └── email
+│               └── client
+│                   ├── new_access.ejs
+│                   └── new_access_static.ejs
+├── tsconfig.json
+└── tsoa.json
+
+58 directories, 95 files

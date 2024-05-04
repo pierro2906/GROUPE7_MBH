@@ -1,0 +1,43 @@
+{
+  "author": {
+    "name": "Matt Null",
+    "email": "hello@mattnull.com",
+    "url": "http://github.com/mattnull"
+  },
+  "name": "osmgeocoder",
+  "description": "Node.js client for Open Street map's geocoding service",
+  "version": "0.0.2",
+  "homepage": "https://github.com/mattnull/node-osmgeocoder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattnull/node-osmgeocoder"
+  },
+  "main": "./index",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "request": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "readme": "OSMGeocoder\n===========\n\nSimple Open Street Map client for geocoding",
+  "_id": "osmgeocoder@0.0.1",
+  "dist": {
+    "shasum": "bb95b35aa6fa10b30078b82776599f6302f22dc8",
+    "tarball": "http://registry.npmjs.org/osmgeocoder/-/osmgeocoder-0.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "mattnull",
+      "email": "hello@mattnull.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "bb95b35aa6fa10b30078b82776599f6302f22dc8",
+  "_resolved": "https://registry.npmjs.org/osmgeocoder/-/osmgeocoder-0.0.1.tgz",
+  "_from": "osmgeocoder@0.0.1",
+  "bugs": {
+    "url": "https://github.com/mattnull/node-osmgeocoder/issues"
+  }
+}

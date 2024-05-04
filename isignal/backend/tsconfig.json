@@ -1,0 +1,105 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": [
+      "es6"
+    ],
+    "module": "commonjs",
+    "types": [
+      "node",
+    ],
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@server/*": [
+        "src/server/*"
+      ],
+      "@middlewares/*": [
+        "src/middlewares/*"
+      ],
+      "@database/*": [
+        "src/database/*"
+      ],
+      "@models/*": [
+        "src/models/*"
+      ],
+      "@functions/*": [
+        "src/functions/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ],
+      "@schemas/*": [
+        "src/schemas/*"
+      ],
+      "@views/*": [
+        "src/views/*"
+      ],
+      "@templates/*": [
+        "src/views/templates/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@pri/*": [
+        "prisma/*"
+      ],
+      "@docs/*": [
+        "docs/*"
+      ],
+      "@logs/*": [
+        "logs/*"
+      ],
+      "@packagejson": [
+        "package.json"
+      ],
+      "@apis/services/*": [
+        "src/apis/services/*"
+      ],
+      "@apis/routes/*": [
+        "src/apis/routes/*"
+      ],
+      "@apis/controllers/*": [
+        "src/apis/controllers/*"
+      ],
+      "@apis/schemas/*": [
+        "src/apis/schemas/*"
+      ],
+      "@apis/daos/*": [
+        "src/apis/daos/*"
+      ],
+    },
+  },
+  "include": [
+    "src/**/*",
+    "prisma/**/*"
+  ],
+  "exclude": [
+    "build",
+    "coverage",
+    "docs",
+    "logs",
+    "node_modules",
+    "public",
+    "__test__"
+  ]
+}

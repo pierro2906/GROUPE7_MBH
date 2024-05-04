@@ -1,0 +1,230 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String     @id @default(uuid())
+  name        String
+  contact     String     @unique
+  email       String?    @unique
+  birthdate   DateTime?
+  password    String?
+  blood_group String?
+  address     String?
+  citizen     Citizen?
+  authority   Authority?
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
+
+  @@index([name, contact])
+}
+
+model AuthorityToken {
+  id String @id @default(uuid())
+
+  authority Authority @relation(fields: [authorityId], references: [id], onDelete: Cascade)
+
+  refreshToken String
+  family       String   @unique
+  browserInfo  String? // Show the user logged devices 
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  authorityId  String
+}
+
+model Citizen {
+  id                  String             @id @default(uuid())
+  status              CitizenStatus      @default(ACTIVE)
+  occupation          String?
+  user                User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId              String             @unique
+  otp_code            String?
+  otp_expiration_date DateTime?
+  otp_hash_code       String?
+  emergencyContacts   EmergencyContact[]
+  source              Source?
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+enum CitizenStatus {
+  BANNED
+  ACTIVE
+}
+
+model Source {
+  id         String   @id @default(uuid())
+  name       String
+  citizen    Citizen  @relation(fields: [citizenId], references: [id], onDelete: Cascade)
+  citizenId  String   @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  incidents  Report[]
+}
+
+model EmergencyContact {
+  id         String   @id @default(uuid())
+  name       String
+  contact    String
+  picture    String?
+  citizen    Citizen  @relation(fields: [citizenId], references: [id], onDelete: Cascade)
+  citizenId  String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Service {
+  id         String     @id @default(uuid())
+  name       String     @unique
+  categories Category[]
+  created_at DateTime   @default(now())
+  updated_at DateTime   @updatedAt
+  bureaux    Bureau[]
+}
+
+model Region {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  bureaux     Bureau[]
+}
+
+model Bureau {
+  id   String @id @default(uuid())
+  name String
+  code String @unique
+
+  latitude    Float
+  longitude   Float
+  description String?
+  service     Service     @relation(fields: [serviceId], references: [id])
+  region      Region      @relation(fields: [regionId], references: [id])
+  created_at  DateTime    @default(now())
+  updated_at  DateTime    @updatedAt
+  serviceId   String
+  regionId    String
+  authorities Authority[]
+}
+
+model Authority {
+  id        String @id @default(uuid())
+  matricule String @unique @default(uuid())
+  password  String
+
+  messages        Message[]
+  diffusions      Report[]
+  authorityTokens AuthorityToken[]
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String           @unique
+  bureau          Bureau           @relation(fields: [bureauId], references: [id])
+  bureauId        String
+  role            Role?            @relation(fields: [roleId], references: [id])
+  roleId          Int?
+  created_at      DateTime         @default(now())
+  updated_at      DateTime         @updatedAt
+
+  @@index([matricule, password])
+}
+
+model Role {
+  id          Int          @id @default(autoincrement())
+  name        String       @unique
+  permissions Permission[]
+  authorities Authority[]
+}
+
+model Permission {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  roles Role[]
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  code        String    @unique
+  description String?
+  services    Service[]
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  reports     Report[]
+
+  @@index([name])
+}
+
+enum ReportStatus {
+  SOLVED
+  UPLOADED
+  VIRIFIED
+}
+
+enum ReportType {
+  DIFFUSION
+  INCIDENT
+  ALERT
+  UNKNOWN
+  ALARM
+}
+
+model Report {
+  id          String       @id @default(uuid())
+  title       String?
+  description String?
+  date        DateTime     @default(now())
+  latitude    Float?
+  longitude   Float?
+  address     String?
+  type        ReportType   @default(UNKNOWN)
+  code        String?
+  status      ReportStatus @default(UPLOADED)
+
+  authority   Authority? @relation(fields: [authorityId], references: [id], onDelete: SetNull)
+  authorityId String?
+  source      Source?    @relation(fields: [sourceId], references: [id], onDelete: SetNull)
+  sourceId    String?
+  files       File[]
+  messages    Message[]
+  category    Category?  @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  categoryId  String?
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
+
+  @@index([latitude, longitude, date])
+}
+
+model File {
+  id            String   @id @default(uuid())
+  name          String
+  original_name String?
+  path          String
+  report        Report   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  reportId      String
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+}
+
+model Message {
+  id          String    @id @default(uuid())
+  content     String
+  date        DateTime  @default(now())
+  incident    Report    @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  reportId    String
+  authority   Authority @relation(fields: [authorityId], references: [id], onDelete: Cascade)
+  authorityId String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+}
